@@ -11,10 +11,14 @@
     "url": "git+https://github.com/cavejondev/safehome-iot-api.git"
   },
   "license": "MIT",
-  "author": "",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  }
+  },
+  "contributors": [
+    "Gabriel Rodrigo Cavejon",
+    "Laura Silvestrin Eschembach",
+    "Bruno Henrique Steinick"
+  ]
 }
