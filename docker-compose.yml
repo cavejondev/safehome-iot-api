@@ -1,0 +1,17 @@
+# Ambiente local minimo para subir o PostgreSQL do projeto.
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: safehome-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: safehome
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - safehome_pgdata:/var/lib/postgresql/data
+
+volumes:
+  safehome_pgdata:

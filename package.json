@@ -1,20 +1,66 @@
 {
   "name": "safehome-iot-api",
   "version": "1.0.0",
-  "description": "SafeHome IoT",
-  "homepage": "https://github.com/cavejondev/safehome-iot-api#readme",
-  "bugs": {
-    "url": "https://github.com/cavejondev/safehome-iot-api/issues"
+  "private": true,
+  "description": "API REST para monitoramento residencial e integracao IoT do SafeHome.",
+  "main": "dist/src/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc --project tsconfig.json",
+    "start": "node dist/src/server.js",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prisma:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:deploy": "prisma migrate deploy",
+    "db:seed": "tsx prisma/seed.ts",
+    "check": "npm run lint && npm run test && npm run build"
   },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "helmet": "^8.1.0",
+    "http-status-codes": "^2.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "node-cron": "^4.0.7",
+    "pino": "^9.7.0",
+    "pino-http": "^10.4.0",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.14.0",
+    "@types/supertest": "^6.0.3",
+    "eslint": "^9.24.0",
+    "prettier": "^3.5.3",
+    "prisma": "^6.6.0",
+    "supertest": "^7.1.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.0",
+    "vitest": "^3.1.1"
+  },
+  "license": "MIT",
+  "type": "commonjs",
+  "homepage": "https://github.com/cavejondev/safehome-iot-api#readme",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cavejondev/safehome-iot-api.git"
   },
-  "license": "MIT",
-  "type": "commonjs",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bugs": {
+    "url": "https://github.com/cavejondev/safehome-iot-api/issues"
   },
   "contributors": [
     "Gabriel Rodrigo Cavejon",

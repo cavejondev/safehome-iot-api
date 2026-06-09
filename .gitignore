@@ -1,0 +1,13 @@
+# Dependencias e build
+node_modules
+dist
+coverage
+
+# Variaveis locais
+.env
+
+# Prisma
+prisma/dev.db
+
+# Logs
+*.log
