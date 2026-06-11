@@ -4,6 +4,8 @@
  */
 import { PlanTier } from '@prisma/client';
 
+export const API_VERSION = '1.0.1';
+
 export const REPORT_RETENTION_DAYS_BY_PLAN: Record<PlanTier, number> = {
   [PlanTier.FREE]: 7,
   [PlanTier.CARE]: 30,

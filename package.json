@@ -1,6 +1,6 @@
 {
   "name": "safehome-iot-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "API REST para monitoramento residencial e integracao IoT do SafeHome.",
   "main": "dist/src/server.js",

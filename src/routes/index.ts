@@ -14,12 +14,14 @@ import { iotRouter } from '../modules/iot/iot.routes';
 import { reportsRouter } from '../modules/reports/reports.routes';
 import { helpButtonsRouter } from '../modules/help-buttons/help-buttons.routes';
 import { sensorsRouter } from '../modules/sensors/sensors.routes';
+import { API_VERSION } from '../shared/constants/system';
 
 export const apiRouter = Router();
 
 apiRouter.get('/health', (_request, response) => {
   response.status(200).json({
     name: 'safehome-api',
+    version: API_VERSION,
     status: 'ok',
     timestamp: new Date().toISOString()
   });
